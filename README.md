@@ -40,5 +40,10 @@ as example below.
 
 ```
 // Outputs MCMXCIX
-Arabic 1999 can be represented as <?php echo $this->arabicToRoman(1999) ?>.
+Arabic 1999 can be represented as <?php echo $this->arabicToRoman(1999) ?> Roman Numeral.
+```
+
+```
+// Outputs 2021
+Roman MMXXI can be represented as <?php echo $this->romanToArabic('MMXXI') ?> Arabic Numeral.
 ```
