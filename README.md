@@ -21,3 +21,16 @@ stable version.
   }
 }
 ```
+
+## Usage
+
+This package acts as a Plate extension and must be loaded with Plates Engine.
+
+```php
+use League\Plates\Engine;
+use League\Plates\Romans\Extension\Romans as RomansExtension;
+
+$engine = new Engine();
+
+$engine->loadExtension(new RomansExtension());
+```
