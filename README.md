@@ -2,6 +2,10 @@
 
 Plates Extension to Convert Arabic to Roman Numerals and Vice Versa
 
+[![Build Status](https://github.com/wandersonwhcr/plates-romans/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/wandersonwhcr/plates-romans/actions/workflows/test.yml?query=branch%3Amain)
+[![Latest Stable Version](https://poser.pugx.org/wandersonwhcr/plates-romans/v/stable?format=flat)](https://packagist.org/packages/wandersonwhcr/plates-romans)
+[![License](https://poser.pugx.org/wandersonwhcr/plates-romans/license?format=flat)](https://packagist.org/packages/wandersonwhcr/plates-romans)
+
 ## Description
 
 This package extension provides a Plates integration for
