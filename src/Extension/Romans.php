@@ -11,7 +11,7 @@ class Romans implements ExtensionInterface
 {
     public function register(Engine $engine): void
     {
-        unset($engine);
+        $engine->registerFunction('romanToArabic', [$this, 'romanToArabic']);
     }
 
     public function romanToArabic(string $roman): string

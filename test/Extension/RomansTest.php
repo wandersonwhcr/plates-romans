@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LeagueTest\Plates\Extension;
+namespace LeagueTest\Plates\Romans\Extension;
 
 use League\Plates\Extension\ExtensionInterface;
 use League\Plates\Romans\Extension\Romans;
