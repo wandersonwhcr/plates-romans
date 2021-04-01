@@ -29,7 +29,7 @@ class Romans implements ExtensionInterface
         try {
             $result = $this->getIntToRomanFilter()->filter((int) $arabic);
         } catch (FilterException $e) {
-            throw new Exception($e->getMessage(), $e->getCode(), $e);
+            throw new Exception($e);
         }
 
         return $result;
@@ -40,7 +40,7 @@ class Romans implements ExtensionInterface
         try {
             $result = (string) $this->getRomanToIntFilter()->filter($roman);
         } catch (LexerException|ParserException $e) {
-            throw new Exception($e->getMessage(), $e->getCode(), $e);
+            throw new Exception($e);
         }
 
         return $result;

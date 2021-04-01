@@ -8,4 +8,8 @@ use Exception as BaseException;
 
 class Exception extends BaseException
 {
+    public function __construct(BaseException $previous)
+    {
+        parent::__construct($previous->getMessage(), $previous->getCode(), $previous);
+    }
 }
