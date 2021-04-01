@@ -19,13 +19,11 @@ class EngineTest extends TestCase
 
     public function testArabicToRoman(): void
     {
-        $this->assertEquals('I', $this->engine->render('arabic-to-roman', ['arabic' => '1']));
         $this->assertEquals('MCMXCIX', $this->engine->render('arabic-to-roman', ['arabic' => '1999']));
     }
 
     public function testRomanToArabic(): void
     {
-        $this->assertEquals('1', $this->engine->render('roman-to-arabic', ['roman' => 'I']));
         $this->assertEquals('1999', $this->engine->render('roman-to-arabic', ['roman' => 'MCMXCIX']));
     }
 }

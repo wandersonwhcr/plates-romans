@@ -20,8 +20,15 @@ class RomansTest extends TestCase
         $this->assertInstanceOf(ExtensionInterface::class, $this->romans);
     }
 
+    public function testArabicToRoman(): void
+    {
+        $this->assertEquals('I', $this->romans->arabicToRoman('1'));
+        $this->assertEquals('MCMXCIX', $this->romans->arabicToRoman('1999'));
+    }
+
     public function testRomanToArabic(): void
     {
         $this->assertEquals('1', $this->romans->romanToArabic('I'));
+        $this->assertEquals('1999', $this->romans->romanToArabic('MCMXCIX'));
     }
 }
