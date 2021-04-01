@@ -9,6 +9,7 @@ use League\Plates\Extension\ExtensionInterface;
 use Romans\Filter\IntToRoman as IntToRomanFilter;
 use Romans\Filter\RomanToInt as RomanToIntFilter;
 use Romans\Lexer\Exception as LexerException;
+use Romans\Parser\Exception as ParserException;
 
 class Romans implements ExtensionInterface
 {
@@ -31,7 +32,7 @@ class Romans implements ExtensionInterface
     {
         try {
             $content = (string) $this->getRomanToIntFilter()->filter($roman);
-        } catch (LexerException $e) {
+        } catch (LexerException|ParserException $e) {
             throw new Exception($e->getMessage(), $e->getCode(), $e);
         }
 

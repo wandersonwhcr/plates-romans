@@ -39,10 +39,17 @@ class RomansTest extends TestCase
         $this->assertEquals('1999', $this->romans->romanToArabic('MCMXCIX'));
     }
 
-    public function testInvalidRoman(): void
+    public function testInvalidRomanToken(): void
     {
         $this->expectException(Exception::class);
 
         $this->romans->romanToArabic('Z');
+    }
+
+    public function testInvalidRomanSyntax(): void
+    {
+        $this->expectException(Exception::class);
+
+        $this->romans->romanToArabic('VX');
     }
 }
