@@ -1,0 +1,7 @@
+{
+  "name": "wandersonwhcr/plates-romans",
+  "description": "Plates Extension to Convert Arabic to Roman Numerals and Vice Versa",
+  "type": "library",
+  "license": "MIT",
+  "require": {}
+}
