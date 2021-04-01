@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.4",
-    "league/plates": "3.4.*",
+    "league/plates": "^3.0.1",
     "wandersonwhcr/romans": "^1.0"
   },
   "require-dev": {
