@@ -65,3 +65,14 @@ try {
     // Invalid Token: Z
 }
 ```
+
+## Development
+
+You can use Docker Compose to build an image and run a container to develop and
+test this package.
+
+```bash
+docker-compose build
+docker-compose run romans composer install
+docker-compose run romans composer test
+```
