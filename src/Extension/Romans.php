@@ -6,6 +6,7 @@ namespace League\Plates\Romans\Extension;
 
 use League\Plates\Engine;
 use League\Plates\Extension\ExtensionInterface;
+use Romans\Filter\Exception as FilterException;
 use Romans\Filter\IntToRoman as IntToRomanFilter;
 use Romans\Filter\RomanToInt as RomanToIntFilter;
 use Romans\Lexer\Exception as LexerException;
@@ -25,18 +26,24 @@ class Romans implements ExtensionInterface
 
     public function arabicToRoman(int|string $arabic): string
     {
-        return $this->getIntToRomanFilter()->filter((int) $arabic);
+        try {
+            $result = $this->getIntToRomanFilter()->filter((int) $arabic);
+        } catch (FilterException $e) {
+            throw new Exception($e->getMessage(), $e->getCode(), $e);
+        }
+
+        return $result;
     }
 
     public function romanToArabic(string $roman): string
     {
         try {
-            $content = (string) $this->getRomanToIntFilter()->filter($roman);
+            $result = (string) $this->getRomanToIntFilter()->filter($roman);
         } catch (LexerException|ParserException $e) {
             throw new Exception($e->getMessage(), $e->getCode(), $e);
         }
 
-        return $content;
+        return $result;
     }
 
     private function getIntToRomanFilter(): IntToRomanFilter

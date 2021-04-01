@@ -52,4 +52,11 @@ class RomansTest extends TestCase
 
         $this->romans->romanToArabic('VX');
     }
+
+    public function testInvalidArabic(): void
+    {
+        $this->expectException(Exception::class);
+
+        $this->romans->arabicToRoman('-1');
+    }
 }
