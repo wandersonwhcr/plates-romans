@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+
+  romans:
+    build:
+      context: "./docker-compose"
+      args:
+        PHP_VERSION: "${PHP_VERSION:-8.0}"
+    volumes:
+    - ".:/app"
+    user: "${UID:-1000}:${GID:-1000}"
+    command: ["tail", "-f", "/dev/null"]
