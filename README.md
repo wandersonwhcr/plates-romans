@@ -44,7 +44,7 @@ as example below.
 
 ```
 // Outputs MCMXCIX
-Arabic 1999 can be represented as <?php echo $this->arabicToRoman(1999) ?> Roman Numeral.
+Arabic 1999 can be represented as <?php echo $this->arabicToRoman('1999') ?> Roman Numeral.
 ```
 
 ```
@@ -58,7 +58,7 @@ Also, errors can be handled using a _try..catch_ syntax.
 use League\Plates\Romans\Extension\Exception as ExtensionException;
 
 try {
-    $this->arabicToRoman(-1);
+    $this->arabicToRoman('-1');
 } catch (ExtensionException $e) {
     // Invalid Integer: -1
 }

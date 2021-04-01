@@ -27,12 +27,6 @@ class RomansTest extends TestCase
         $this->assertEquals('MCMXCIX', $this->romans->arabicToRoman('1999'));
     }
 
-    public function testArabicToRomanAsInt(): void
-    {
-        $this->assertEquals('I', $this->romans->arabicToRoman(1));
-        $this->assertEquals('MCMXCIX', $this->romans->arabicToRoman(1999));
-    }
-
     public function testRomanToArabic(): void
     {
         $this->assertEquals('1', $this->romans->romanToArabic('I'));

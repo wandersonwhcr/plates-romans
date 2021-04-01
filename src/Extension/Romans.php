@@ -24,7 +24,7 @@ class Romans implements ExtensionInterface
         $engine->registerFunction('romanToArabic', [$this, 'romanToArabic']);
     }
 
-    public function arabicToRoman(int|string $arabic): string
+    public function arabicToRoman(string $arabic): string
     {
         try {
             $result = $this->getIntToRomanFilter()->filter((int) $arabic);
