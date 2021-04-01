@@ -1,3 +1,3 @@
 # plates-romans
 
-Plates Extension to Convert Romans to Arabic Numerals
+Plates Extension to Convert Arabic to Roman Numerals and Vice Versa
