@@ -20,6 +20,6 @@ class EngineTest extends TestCase
     public function testRomanToArabic(): void
     {
         $this->assertEquals('1', $this->engine->render('roman-to-arabic', ['roman' => 'I']));
-        $this->assertEquals('2', $this->engine->render('roman-to-arabic', ['roman' => 'II']));
+        $this->assertEquals('1999', $this->engine->render('roman-to-arabic', ['roman' => 'MCMXCIX']));
     }
 }
