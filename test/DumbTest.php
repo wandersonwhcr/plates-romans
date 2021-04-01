@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PlatesTest\Romans;
+namespace LeagueTest\Plates\Romans;
 
+use League\Plates\Romans\Dumb;
 use PHPUnit\Framework\TestCase;
-use Plates\Romans\Dumb;
 
 class DumbTest extends TestCase
 {

@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Plates\\Romans\\": "src"
+      "League\\Plates\\Romans\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PlatesTest\\Romans\\": "test"
+      "LeagueTest\\Plates\\Romans\\": "test"
     }
   },
   "scripts": {

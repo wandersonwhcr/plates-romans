@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Plates\Romans;
+namespace League\Plates\Romans;
 
 class Dumb
 {
