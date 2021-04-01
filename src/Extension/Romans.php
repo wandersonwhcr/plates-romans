@@ -33,18 +33,14 @@ class Romans implements ExtensionInterface
 
     public function getIntToRomanFilter(): IntToRomanFilter
     {
-        if (! $this->intToRomanFilter) {
-            $this->intToRomanFilter = new IntToRomanFilter();
-        }
+        $this->intToRomanFilter ??= new IntToRomanFilter();
 
         return $this->intToRomanFilter;
     }
 
     public function getRomanToIntFilter(): RomanToIntFilter
     {
-        if (! $this->romanToIntFilter) {
-            $this->romanToIntFilter = new RomanToIntFilter();
-        }
+        $this->romanToIntFilter ??= new RomanToIntFilter();
 
         return $this->romanToIntFilter;
     }
