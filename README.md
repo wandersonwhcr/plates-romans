@@ -14,7 +14,7 @@ convert a `string` with a Roman number to a `string` with Arabic and vice-versa.
 
 ## Installation
 
-This package uses Composer as default repository. You can install it addint the
+This package uses Composer as default repository. You can install it adding the
 name of package in `require` attribute of `composer.json`, pointing to the last
 stable version.
 
