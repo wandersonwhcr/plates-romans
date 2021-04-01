@@ -76,3 +76,8 @@ docker-compose build
 docker-compose run romans composer install
 docker-compose run romans composer test
 ```
+
+## License
+
+This package is opensource and available under MIT license described in
+[LICENSE](https://github.com/wandersonwhcr/plates-romans/blob/main/LICENSE).
