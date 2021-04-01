@@ -24,7 +24,7 @@ stable version.
 
 ## Usage
 
-This package acts as a Plate extension and must be loaded with Plates Engine.
+This package acts as a Plates extension and must be loaded with Plates Engine.
 
 ```php
 use League\Plates\Engine;
