@@ -6,6 +6,7 @@ namespace League\Plates\Romans\Extension;
 
 use League\Plates\Engine;
 use League\Plates\Extension\ExtensionInterface;
+use Romans\Filter\RomanToInt;
 
 class Romans implements ExtensionInterface
 {
@@ -16,8 +17,8 @@ class Romans implements ExtensionInterface
 
     public function romanToArabic(string $roman): string
     {
-        unset($roman);
+        $filter = new RomanToInt();
 
-        return '1';
+        return (string) $filter->filter($roman);
     }
 }

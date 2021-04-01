@@ -19,8 +19,7 @@ class EngineTest extends TestCase
 
     public function testRomanToArabic(): void
     {
-        $template = $this->engine->make('roman-to-arabic');
-
-        $this->assertEquals('1', $template->render());
+        $this->assertEquals('1', $this->engine->render('roman-to-arabic', ['roman' => 'I']));
+        $this->assertEquals('2', $this->engine->render('roman-to-arabic', ['roman' => 'II']));
     }
 }
