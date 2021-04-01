@@ -34,3 +34,11 @@ $engine = new Engine();
 
 $engine->loadExtension(new RomansExtension());
 ```
+
+After, methods `arabicToRoman` and `romanToArabic` can be used inside templates
+as example below.
+
+```
+// Outputs MCMXCIX
+Arabic 1999 can be represented as <?php echo $this->arabicToRoman(1999) ?>.
+```
