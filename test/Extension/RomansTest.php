@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LeagueTest\Plates\Romans\Extension;
 
 use League\Plates\Extension\ExtensionInterface;
+use League\Plates\Romans\Extension\Exception;
 use League\Plates\Romans\Extension\Romans;
 use PHPUnit\Framework\TestCase;
 
@@ -36,5 +37,12 @@ class RomansTest extends TestCase
     {
         $this->assertEquals('1', $this->romans->romanToArabic('I'));
         $this->assertEquals('1999', $this->romans->romanToArabic('MCMXCIX'));
+    }
+
+    public function testInvalidRoman(): void
+    {
+        $this->expectException(Exception::class);
+
+        $this->romans->romanToArabic('Z');
     }
 }
