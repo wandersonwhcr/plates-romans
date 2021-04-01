@@ -47,3 +47,21 @@ Arabic 1999 can be represented as <?php echo $this->arabicToRoman(1999) ?> Roman
 // Outputs 2021
 Roman MMXXI can be represented as <?php echo $this->romanToArabic('MMXXI') ?> Arabic Numeral.
 ```
+
+Also, errors can be handled using a _try..catch_ syntax.
+
+```php
+use League\Plates\Romans\Extension\Exception as ExtensionException;
+
+try {
+    $this->arabicToRoman(-1);
+} catch (ExtensionException $e) {
+    // Invalid Integer: -1
+}
+
+try {
+    $this->romanToArabic('Z');
+} catch (ExtensionException $e) {
+    // Invalid Token: Z
+}
+```
