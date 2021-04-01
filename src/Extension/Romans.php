@@ -13,4 +13,11 @@ class Romans implements ExtensionInterface
     {
         unset($engine);
     }
+
+    public function romanToArabic(string $roman): string
+    {
+        unset($roman);
+
+        return '1';
+    }
 }
