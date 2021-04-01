@@ -3,6 +3,9 @@
   "description": "Plates Extension to Convert Arabic to Roman Numerals and Vice Versa",
   "type": "library",
   "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
   "require-dev": {
     "php-parallel-lint/php-parallel-lint": "1.2.*",
     "phpunit/phpunit": "9.5.*"
