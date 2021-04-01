@@ -5,5 +5,23 @@
   "license": "MIT",
   "require-dev": {
     "phpunit/phpunit": "9.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plates\\Romans\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PlatesTest\\Romans\\": "test"
+    }
+  },
+  "scripts": {
+    "optimize": [
+      "composer install --no-dev --optimize-autoloader --classmap-authorizative"
+    ],
+    "test": [
+      "phpunit"
+    ]
   }
 }
