@@ -6,11 +6,15 @@ namespace League\Plates\Romans\Extension;
 
 use League\Plates\Engine;
 use League\Plates\Extension\ExtensionInterface;
-use Romans\Filter\IntToRoman;
-use Romans\Filter\RomanToInt;
+use Romans\Filter\IntToRoman as IntToRomanFilter;
+use Romans\Filter\RomanToInt as RomanToIntFilter;
 
 class Romans implements ExtensionInterface
 {
+    private ?IntToRomanFilter $intToRomanFilter = null;
+
+    private ?RomanToIntFilter $romanToIntFilter = null;
+
     public function register(Engine $engine): void
     {
         $engine->registerFunction('arabicToRoman', [$this, 'arabicToRoman']);
@@ -19,15 +23,29 @@ class Romans implements ExtensionInterface
 
     public function arabicToRoman(string $arabic): string
     {
-        $filter = new IntToRoman();
-
-        return $filter->filter((int) $arabic);
+        return $this->getIntToRomanFilter()->filter((int) $arabic);
     }
 
     public function romanToArabic(string $roman): string
     {
-        $filter = new RomanToInt();
+        return (string) $this->getRomanToIntFilter()->filter($roman);
+    }
 
-        return (string) $filter->filter($roman);
+    public function getIntToRomanFilter(): IntToRomanFilter
+    {
+        if (! $this->intToRomanFilter) {
+            $this->intToRomanFilter = new IntToRomanFilter();
+        }
+
+        return $this->intToRomanFilter;
+    }
+
+    public function getRomanToIntFilter(): RomanToIntFilter
+    {
+        if (! $this->romanToIntFilter) {
+            $this->romanToIntFilter = new RomanToIntFilter();
+        }
+
+        return $this->romanToIntFilter;
     }
 }
