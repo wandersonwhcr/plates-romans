@@ -3,6 +3,15 @@
   "description": "Plates Extension to Convert Arabic to Roman Numerals and Vice Versa",
   "type": "library",
   "license": "MIT",
+  "keywords": [
+    "plates",
+    "plates-extension",
+    "roman",
+    "roman-number",
+    "roman-numeral",
+    "converter",
+    "filter"
+  ],
   "require": {
     "php": ">=7.4",
     "league/plates": "^3.0.1",
